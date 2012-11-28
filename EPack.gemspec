@@ -5,7 +5,7 @@ require 'EPack/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "EPack"
-  gem.version       = REGL::VERSION
+  gem.version       = EPack::VERSION
   gem.authors       = ["Aurimas Niekis"]
   gem.email         = ["gcdsxs@gmail.com"]
   gem.description   = %q{EPack - Eagle Package Manager}

@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+require 'epack'
+$:.each do |e|
+  puts e
+end
+begin
+  require 'EPack/cli'
+  EPack::CLI.start
+rescue EPack::EPackError => e
+  EPack.ui.error e.message
+  EPack.ui.debug e.backtrace.join("\n")
+  exit e.status_code
+rescue Interrupt => e
+  EPack.ui.error "\nQuitting..."
+  EPack.ui.debug e.backtrace.join("\n")
+  exit 1
+rescue SystemExit => e
+  exit e.status
+rescue Exception => e
+  EPack.ui.error(
+    "Unfortunately, a fatal error has occurred. Please see the EPack \n" \
+    "troubleshooting documentation at http://bit.ly/EPack-issues. Thanks! \n")
+  raise e
+end

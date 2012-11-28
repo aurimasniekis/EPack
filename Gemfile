@@ -5,3 +5,4 @@ gemspec
 
 gem 'libeagle'
 gem 'thor'
+gem 'highline'
