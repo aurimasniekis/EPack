@@ -1,0 +1,3 @@
+source 'https://packages.epack.org'
+
+device 'atmega128'

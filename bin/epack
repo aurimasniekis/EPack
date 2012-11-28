@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby
 require 'epack'
-$:.each do |e|
-  puts e
-end
 begin
   require 'EPack/cli'
   EPack::CLI.start
